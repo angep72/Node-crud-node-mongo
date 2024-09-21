@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <h2>all blogs go here</h2>
+    <% if(blogs.length > 0) {%>
+        <% blogs.forEach((blog)=>{%>
+            <h3><%= blog.title %></h3>
+            <p><%= blog.snippette %></p>
+        <% }) %>
+        <% } else{ %>
+            <p>There is no blogs in the array </p>
+            <% } %>
+</body>
+</html>
